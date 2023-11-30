@@ -1,5 +1,8 @@
 const toggle = document.getElementById("toggle");
 const nav = document.querySelector("nav");
+const modal = document.getElementById("modal");
+const openBtn = document.getElementById("open");
+const closeBtn = document.getElementById("close");
 
 //Helper functions
 
@@ -16,7 +19,18 @@ function toggleNavbar(e) {
   e.stopPropagation();
 }
 
+function toggleModal() {
+  if (!modal.classList.contains("show-modal")) {
+    modal.classList.add("show-modal");
+    console.log("here");
+  } else {
+    modal.classList.remove("show-modal");
+  }
+}
+
 //EVENT LISTENERS
+openBtn.addEventListener("click", toggleModal);
+closeBtn.addEventListener("click", toggleModal);
 toggle.addEventListener("click", toggleNavbar);
 document.addEventListener("click", (e) => {
   if (!nav.contains(e.target)) {

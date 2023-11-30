@@ -142,6 +142,10 @@ header p {
   right: 0;
 }
 
+.show-modal {
+  display: block;
+}
+
 .modal {
   background: #fff;
   border-radius: 5px;
