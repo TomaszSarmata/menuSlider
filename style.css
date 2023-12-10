@@ -15,6 +15,7 @@
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
+  transition: transform 0.3s ease;
 }
 
 button,
@@ -142,8 +143,13 @@ header p {
   right: 0;
 }
 
-.show-modal {
+.modal-container.show-modal {
   display: block;
+}
+/* here we are going to add a class to show the nav (course solution) the diff is that the entrie body shift to the right by 200px */
+
+body.show-nav {
+  transform: translateX(200px);
 }
 
 .modal {
@@ -156,6 +162,8 @@ header p {
   left: 40%;
   max-width: 100%;
   width: 400px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
 }
 
 .modal-header {
@@ -193,4 +201,14 @@ header p {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+/* added keyframes for the modalopen animation to fade in the modal so that it looks alittle smoother */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
