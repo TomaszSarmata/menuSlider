@@ -4,8 +4,6 @@ const closeBtn = document.getElementById("close");
 const openBtn = document.getElementById("open");
 const modal = document.getElementById("modal");
 
-alert("here");
-
 //Toggle nav
 //here the diff is that we could've used the .toggle method to toggle the class. And also the entire body shifts right
 toggle.addEventListener("click", () =>
